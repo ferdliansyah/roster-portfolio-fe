@@ -18,7 +18,7 @@ export default function PortfolioParser() {
     setIsLoading(true)
 
     try {
-      const response = await fetch("http://localhost:8000/api/portfolios", {
+      const response = await fetch(process.env.BE_HOST + "/portfolios", {
         method: "POST",
         mode: "cors",
         headers: {
